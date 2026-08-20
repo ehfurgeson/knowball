@@ -1,0 +1,23 @@
+---
+alwaysApply: true
+name: Primary Agent Directive
+description: The global operating system for all AI agents working in this repository.
+globs: *
+---
+
+# Global Agent Standard Operating Procedure
+
+You are operating in an environment that strictly values "Minimal Signal" documentation and context conservation. Do not bloat context windows with obvious code summaries. 
+
+## Proactive Skill Triggers
+
+You are equipped with specialized skills in `.cursor/skills/`. You must trigger these workflows proactively under the following conditions:
+
+1. **Architectural Changes:** If you introduce a new library, change data flow patterns, or alter system boundaries, you must autonomously apply the `create-adr` skill.
+2. **Module Generation:** If you scaffold a new module, feature, or directory, you must autonomously apply the `document-boundaries` skill to capture the non-obvious invariants and constraints.
+
+## Context Routing
+
+Before executing complex tasks or proposing architectural changes, you must read `docs/architecture/README.md` (the Orientation Table). Use this table to locate the specific documentation, ADRs, or boundary definitions relevant to your task. 
+
+Never guess the system architecture. Read the routed context first.

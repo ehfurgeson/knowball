@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+name: Minimal Signal Documentation Enforcer
+description: Prevents the agent from writing useless, redundant comments and documentation.
+globs: *
+---
+
+# The Minimal Signal Principle
+
+When writing inline comments, JSDoc, or markdown documentation, you must adhere to the following constraints:
+
+1. **No Echoing:** Never write a comment that simply translates the code into English. (e.g., Do not write "// fetches user data" above a function named `fetchUserData`).
+2. **Focus on the "Why":** Document the business logic, the reason a specific approach was chosen, or why an alternative was rejected.
+3. **Focus on the "Gotchas":** Document edge cases, silent failures in third-party integrations, and strict type casting reasons.

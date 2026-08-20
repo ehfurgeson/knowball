@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+name: Strict Boundary Enforcer
+description: Ensures the agent respects domain boundaries and asks for permission before modifying critical systems.
+globs: *
+---
+
+# System Boundaries and Permissions
+
+1. **Database and Schema Changes:** You must ask the user for explicit confirmation before generating or executing database migrations, altering schemas, or changing ORM models.
+2. **Authentication/Authorization:** Do not modify token validation, session management, or routing guards without explicitly outlining the security implications to the user first.
+3. **Domain Leakage:** Ensure that UI components strictly handle presentation and delegate data fetching or mutation to the designated service or hook layer. Never mix business logic directly into presentation layers.
