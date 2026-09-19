@@ -1,27 +1,23 @@
-# Knowball
+# Knowball (archived)
 
-NFL player stats, visualized. Knowball is a public web app that shows how a player’s season-to-date numbers sit in the league distribution—percentiles and density curves, not just raw totals.
+> **This repository is archived.** Active development moved to the Midwest Ball monorepo:
+>
+> **https://github.com/midwestball/midwestball.github.io**
+>
+> Live site: **https://midwestball.github.io/**
 
-Data is computed by [ballnet](https://github.com/ehfurgeson/ballnet) and served as JSON from Supabase Storage. This repo is the Next.js frontend only.
+## What this was
 
-**Stack:** Next.js (App Router) · React · Tailwind · Recharts · Vercel
+Knowball was the public Next.js frontend for NFL player stats versus the league (percentiles and density curves). It rendered JSON published by [ballnet](https://github.com/ehfurgeson/ballnet) from Supabase Storage.
 
-## Local development
+## Why it was archived
 
-```bash
-cd web
-npm install
-npm run dev
-```
+Knowball and ballnet were combined into [`midwestball/midwestball.github.io`](https://github.com/midwestball/midwestball.github.io) so the org could keep both histories in one place, ship the site as a static GitHub Pages app under `frontend/`, and run the Ballnet ETL beside it under `backend/`. This repo is kept read-only for historical reference; do not open PRs here.
 
-Set `NEXT_PUBLIC_SUPABASE_URL` to your Supabase project URL (e.g. in `.env.local`). Required for local `npm run dev` as well as Vercel — Knowball never reads sibling `ballnet/data`. Public `knowball-public` bucket only; no service key.
+## Where to go instead
 
-## Deploy
-
-1. Connect this repo in Vercel and set **Root Directory** to `web`.
-2. Add `NEXT_PUBLIC_SUPABASE_URL`.
-3. Deploy.
-
-## Related
-
-- [ballnet](https://github.com/ehfurgeson/ballnet) — ingest, densities, percentiles, and JSON publish
+| Need | Location |
+|---|---|
+| Frontend (ex-Knowball) | [`frontend/`](https://github.com/midwestball/midwestball.github.io/tree/main/frontend) |
+| Backend / Ballnet ETL | [`backend/`](https://github.com/midwestball/midwestball.github.io/tree/main/backend) |
+| Docs / ops | [Repo README](https://github.com/midwestball/midwestball.github.io#readme) |
